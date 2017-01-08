@@ -15,8 +15,6 @@ import java.util.List;
 
 public class AttractionsActivity extends AppCompatActivity {
 
-    RecyclerView rcAttractions;
-    AdapterGeneralList adapter;
     List<ItemRestaurant> data = new ArrayList<>();
 
     @Override
@@ -24,7 +22,7 @@ public class AttractionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attractions);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        rcAttractions = (RecyclerView) findViewById(R.id.rcAttractions);
+        RecyclerView rcAttractions = (RecyclerView) findViewById(R.id.rcAttractions);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -38,7 +36,7 @@ public class AttractionsActivity extends AppCompatActivity {
         data.add(new ItemRestaurant(R.drawable.monumentorevolucion, getString(R.string.attractionThree), getString(R.string.attractionThreeDescr), getString(R.string.attractionThreeLocation), 19.424227, -99.171485));
         data.add(new ItemRestaurant(R.drawable.miradorlatino, getString(R.string.attractionFour), getString(R.string.attractionFourDescr), getString(R.string.attractionFourLocation), 19.4323517, -99.1466156));
 
-        adapter = new AdapterGeneralList(this, data);
+        AdapterGeneralList adapter = new AdapterGeneralList(this, data);
         rcAttractions.setAdapter(adapter);
     }
 

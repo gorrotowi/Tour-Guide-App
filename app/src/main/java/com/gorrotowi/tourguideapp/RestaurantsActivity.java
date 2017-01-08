@@ -15,8 +15,6 @@ import java.util.List;
 
 public class RestaurantsActivity extends AppCompatActivity {
 
-    RecyclerView rcRestaurants;
-    AdapterGeneralList adapter;
     List<ItemRestaurant> data = new ArrayList<>();
 
     @Override
@@ -25,7 +23,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_restaurants);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        rcRestaurants = (RecyclerView) findViewById(R.id.rcRestaurants);
+        RecyclerView rcRestaurants = (RecyclerView) findViewById(R.id.rcRestaurants);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -39,7 +37,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         data.add(new ItemRestaurant(R.drawable.cafetacuba, getString(R.string.restaurantThree), getString(R.string.restaurantThreeDescr), getString(R.string.RestaurantThreeLocation), 19.4353462, -99.1409855));
         data.add(new ItemRestaurant(R.drawable.perronegro, getString(R.string.restaurantFour), getString(R.string.restaurantFourDescr), getString(R.string.RestaurantFourLocation), 19.4339019, -99.138742));
 
-        adapter = new AdapterGeneralList(this, data);
+        AdapterGeneralList adapter = new AdapterGeneralList(this, data);
         rcRestaurants.setAdapter(adapter);
 
     }

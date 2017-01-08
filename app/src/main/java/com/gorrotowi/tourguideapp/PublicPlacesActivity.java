@@ -15,8 +15,6 @@ import java.util.List;
 
 public class PublicPlacesActivity extends AppCompatActivity {
 
-    RecyclerView rcPublicPlaces;
-    AdapterGeneralList adapter;
     List<ItemRestaurant> data = new ArrayList<>();
 
     @Override
@@ -25,7 +23,7 @@ public class PublicPlacesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_public_places);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        rcPublicPlaces = (RecyclerView) findViewById(R.id.rcPublicPlaces);
+        RecyclerView rcPublicPlaces = (RecyclerView) findViewById(R.id.rcPublicPlaces);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -39,7 +37,7 @@ public class PublicPlacesActivity extends AppCompatActivity {
         data.add(new ItemRestaurant(R.drawable.laalameda, getString(R.string.publicPlaceThree), getString(R.string.publicPlaceThreeDescr), getString(R.string.publicPlaceThreeLocation), 19.4357619, -99.1463079));
         data.add(new ItemRestaurant(R.drawable.bosquechapultepec, getString(R.string.publicPlaceFour), getString(R.string.publicPlaceFourDescr), getString(R.string.publicPlaceFourLocation), 19.4194865, -99.1916445));
 
-        adapter = new AdapterGeneralList(this, data);
+        AdapterGeneralList adapter = new AdapterGeneralList(this, data);
         rcPublicPlaces.setAdapter(adapter);
     }
 

@@ -15,8 +15,6 @@ import java.util.List;
 
 public class EventsActivity extends AppCompatActivity {
 
-    RecyclerView rcEvents;
-    AdapterGeneralList adapter;
     List<ItemRestaurant> data = new ArrayList<>();
 
     @Override
@@ -24,7 +22,7 @@ public class EventsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        rcEvents = (RecyclerView) findViewById(R.id.rcEvents);
+        RecyclerView rcEvents = (RecyclerView) findViewById(R.id.rcEvents);
 
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -36,7 +34,7 @@ public class EventsActivity extends AppCompatActivity {
         data.add(new ItemRestaurant(0, getString(R.string.eventOne), getString(R.string.eventOneDescr), getString(R.string.eventOneLocation), 19.3945846, -99.1769924));
         data.add(new ItemRestaurant(0, getString(R.string.eventTwo), getString(R.string.eventTwoDescr), getString(R.string.eventTwoLocation), 19.4132082, -99.1741409));
 
-        adapter = new AdapterGeneralList(this, data);
+        AdapterGeneralList adapter = new AdapterGeneralList(this, data);
         rcEvents.setAdapter(adapter);
     }
 

@@ -16,16 +16,14 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<ItemMainList> data = new ArrayList<>();
-    AdapterMainList adater;
-    RecyclerView recyclerView;
+    private List<ItemMainList> data = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = (RecyclerView) findViewById(R.id.rcMain);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rcMain);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         data.add(new ItemMainList(getString(R.string.restaurants), R.drawable.store));
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(new ItemMainList(getString(R.string.events), R.drawable.calendar));
         data.add(new ItemMainList(getString(R.string.attractions), R.drawable.airballoon));
 
-        adater = new AdapterMainList(data, new RecyclerListener() {
+        AdapterMainList adater = new AdapterMainList(data, new RecyclerListener() {
             @Override
             public void onRecyclerListener(View view, int position) {
                 Intent intent;
