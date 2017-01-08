@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.rcMain);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        data.add(new ItemMainList("Restaurants", R.drawable.store));
-        data.add(new ItemMainList("Public Places", R.drawable.flower));
-        data.add(new ItemMainList("Events", R.drawable.calendar));
-        data.add(new ItemMainList("Attractions", R.drawable.airballoon));
+        data.add(new ItemMainList(getString(R.string.restaurants), R.drawable.store));
+        data.add(new ItemMainList(getString(R.string.publicplaces), R.drawable.flower));
+        data.add(new ItemMainList(getString(R.string.events), R.drawable.calendar));
+        data.add(new ItemMainList(getString(R.string.attractions), R.drawable.airballoon));
 
         adater = new AdapterMainList(data, new RecyclerListener() {
             @Override

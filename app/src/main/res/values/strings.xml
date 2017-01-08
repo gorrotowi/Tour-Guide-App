@@ -51,4 +51,11 @@
     <string name="eventTwo">The White Lies</string>
     <string name="eventTwoDescr">19 febrero 2017</string>
     <string name="eventTwoLocation">El Plaza Condesa</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="publicplaces">Public Places</string>
+    <string name="events">Events</string>
+    <string name="attractions">Attractions</string>
+    <string name="examplename">El cardenal</string>
+    <string name="exampledescription">Lorem ipsum description of restaurant</string>
+    <string name="examplelocation">Eje central y esquina 5 de mayo</string>
 </resources>

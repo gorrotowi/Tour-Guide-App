@@ -35,8 +35,6 @@ public class EventsActivity extends AppCompatActivity {
 
         data.add(new ItemRestaurant(0, getString(R.string.eventOne), getString(R.string.eventOneDescr), getString(R.string.eventOneLocation), 19.3945846, -99.1769924));
         data.add(new ItemRestaurant(0, getString(R.string.eventTwo), getString(R.string.eventTwoDescr), getString(R.string.eventTwoLocation), 19.4132082, -99.1741409));
-//        data.add(new ItemRestaurant(0, getString(R.string.eventThree), getString(R.string.eventThreeDescr), getString(R.string.eventThreeLocation), 19.4353462, -99.1409855));
-//        data.add(new ItemRestaurant(0, getString(R.string.eventFour), getString(R.string.eventFourDescr), getString(R.string.eventFourLocation), 19.4339019, -99.138742));
 
         adapter = new AdapterGeneralList(this, data);
         rcEvents.setAdapter(adapter);
